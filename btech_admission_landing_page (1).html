@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B.Tech Admission Guidance 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f7f9fc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; }
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 55%, #38bdf8 100%);
+      color: white;
+      padding: 70px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      z-index: 0;
+    }
+    .hero::before {
+      width: 280px; height: 280px;
+      top: -80px; right: -60px;
+    }
+    .hero::after {
+      width: 180px; height: 180px;
+      bottom: -40px; left: -50px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .9fr;
+      gap: 36px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(30px, 5vw, 54px);
+      line-height: 1.15;
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+    .hero p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 26px;
+      max-width: 720px;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: .25s ease;
+      cursor: pointer;
+      border: none;
+      font-size: 15px;
+    }
+    .btn-primary {
+      background: #22c55e;
+      color: white;
+      box-shadow: 0 12px 24px rgba(34,197,94,.25);
+    }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.13);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 10px 16px;
+      margin-top: 10px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.95);
+    }
+    .hero-card {
+      background: white;
+      color: #111827;
+      padding: 24px;
+      border-radius: 24px;
+      box-shadow: 0 24px 60px rgba(2,6,23,.18);
+    }
+    .hero-card h3 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      color: #0f172a;
+    }
+    .branch-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+    .branch-list li {
+      padding: 14px 16px;
+      background: #eff6ff;
+      border: 1px solid #dbeafe;
+      border-radius: 16px;
+      font-weight: 600;
+      color: #1e3a8a;
+    }
+    section {
+      padding: 68px 0;
+    }
+    .section-title {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 40px;
+    }
+    .section-title h2 {
+      font-size: clamp(26px, 4vw, 40px);
+      margin-bottom: 12px;
+      color: #0f172a;
+    }
+    .section-title p {
+      color: #475569;
+      font-size: 16px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 22px;
+      box-shadow: 0 12px 34px rgba(15,23,42,.08);
+      border: 1px solid #e2e8f0;
+    }
+    .card h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+    .card p { color: #475569; font-size: 15px; }
+    .highlight {
+      background: linear-gradient(135deg, #ecfeff 0%, #eff6ff 100%);
+    }
+    .salary-table {
+      display: grid;
+      gap: 14px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .salary-row {
+      background: white;
+      border-radius: 18px;
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr .8fr;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 24px rgba(15,23,42,.06);
+    }
+    .salary-row strong { color: #0f172a; }
+    .salary-chip {
+      display: inline-block;
+      background: #dcfce7;
+      color: #166534;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .college-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 980px;
+      margin: auto;
+    }
+    .college-box {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(15,23,42,.07);
+    }
+    .college-box h3 { margin-bottom: 12px; color: #0f172a; }
+    .college-box ul {
+      padding-left: 20px;
+      color: #475569;
+      display: grid;
+      gap: 8px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .step {
+      background: white;
+      border-radius: 22px;
+      padding: 24px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 28px rgba(15,23,42,.06);
+    }
+    .step-number {
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+    .form-section {
+      background: #0f172a;
+      color: white;
+      border-radius: 28px;
+      padding: 38px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .form-section p { color: rgba(255,255,255,.85); }
+    .mini-points {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+      font-size: 15px;
+    }
+    form {
+      background: white;
+      padding: 22px;
+      border-radius: 24px;
+      color: #111827;
+      box-shadow: 0 20px 50px rgba(2,6,23,.25);
+    }
+    .field {
+      margin-bottom: 14px;
+    }
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 7px;
+      color: #0f172a;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border-radius: 14px;
+      border: 1px solid #cbd5e1;
+      font: inherit;
+      outline: none;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 4px rgba(37,99,235,.1);
+    }
+    .footer {
+      background: #020617;
+      color: #cbd5e1;
+      padding: 26px 0 90px;
+      text-align: center;
+    }
+    .footer strong { color: white; }
+
+    .floating-wa {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    .wa-popup {
+      width: min(340px, calc(100vw - 32px));
+      background: white;
+      border-radius: 22px;
+      box-shadow: 0 24px 60px rgba(15,23,42,.18);
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      animation: popupFade .4s ease;
+    }
+    @keyframes popupFade {
+      from { opacity: 0; transform: translateY(12px) scale(.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .wa-header {
+      background: #22c55e;
+      color: white;
+      padding: 14px 16px;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .wa-close {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .wa-body {
+      padding: 16px;
+    }
+    .wa-body h4 {
+      margin-bottom: 8px;
+      color: #0f172a;
+      font-size: 18px;
+    }
+    .wa-body p {
+      color: #475569;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+    .wa-quick {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .wa-quick button {
+      width: 100%;
+      padding: 11px 12px;
+      border-radius: 12px;
+      border: 1px solid #dbeafe;
+      background: #f8fbff;
+      color: #1d4ed8;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: left;
+    }
+    .wa-main-btn {
+      width: 100%;
+      background: #22c55e;
+      color: white;
+      border: none;
+      padding: 13px 16px;
+      border-radius: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .wa-fab {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #22c55e;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 16px 34px rgba(34,197,94,.35);
+      font-size: 28px;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .form-section,
+      .cards,
+      .college-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+      .salary-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 640px) {
+      .hero { padding-top: 48px; }
+      .hero-card { padding: 20px; }
+      section { padding: 52px 0; }
+      .form-section { padding: 22px; }
+      .hero-points { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">B.Tech Admission Guidance 2026</span>
+        <h1>Choose the Right B.Tech Branch for a Strong Future</h1>
+        <p>
+          Confused about which B.Tech branch is best for you? Get expert help for branch selection,
+          best colleges, starting salary insights, fees, eligibility, and admission support.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" id="heroWhatsappBtn" href="#">Chat on WhatsApp</a>
+          <a class="btn btn-secondary" href="#lead-form">Get Free Guidance</a>
+        </div>
+        <div class="hero-points">
+          <div>✔ Branch Selection Support</div>
+          <div>✔ Best College Guidance</div>
+          <div>✔ Salary & Career Scope</div>
+          <div>✔ Admission Assistance</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Top Growing B.Tech Branches</h3>
+        <ul class="branch-list">
+          <li>1. Computer Science Engineering</li>
+          <li>2. Artificial Intelligence & Machine Learning</li>
+          <li>3. Data Science & Data Analytics</li>
+          <li>4. Cyber Security</li>
+          <li>5. Robotics & Automation</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Students Get Confused</h2>
+        <p>
+          Most students know they want to do B.Tech, but they are not sure which branch matches their interest,
+          future scope, and placement opportunities. One wrong choice can affect the next 4 to 5 years.
+        </p>
+      </div>
+      <div class="cards">
+        <div class="card highlight">
+          <h3>Branch Confusion</h3>
+          <p>Students often choose a branch just by hearing its name, without understanding real job roles and future demand.</p>
+        </div>
+        <div class="card">
+          <h3>College Confusion</h3>
+          <p>Many students do not know how to compare colleges on approvals, placements, faculty, infrastructure, and fees.</p>
+        </div>
+        <div class="card">
+          <h3>Career Confusion</h3>
+          <p>Without proper guidance, students struggle to understand salary range, growth opportunities, and required skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f1f5f9;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Expected Starting Salary Range</h2>
+        <p>These are general fresher-level ranges and can vary by college quality, skill level, internships, and company type.</p>
+      </div>
+      <div class="salary-table">
+        <div class="salary-row">
+          <strong>Computer Science Engineering</strong>
+          <span class="salary-chip">₹3.5 LPA – ₹8 LPA+</span>
+          <span>Strong demand in software, product, and tech companies</span>
+        </div>
+        <div class="salary-row">
+          <strong>AI & Machine Learning</strong>
+          <span class="salary-chip">₹4 LPA – ₹10 LPA+</span>
+          <span>High future scope with strong skill-based growth</span>
+        </div>
+        <div class="salary-row">
+          <strong>Data Science & Data Analytics</strong>
+          <span class="salary-chip">₹4 LPA – ₹9 LPA+</span>
+          <span>Great for students interested in data, insights, and business decisions</span>
+        </div>
+        <div class="salary-row">
+          <strong>Cyber Security</strong>
+          <span class="salary-chip">₹4 LPA – ₹9 LPA+</span>
+          <span>Growing field with demand in security and network protection</span>
+        </div>
+        <div class="salary-row">
+          <strong>Robotics & Automation</strong>
+          <span class="salary-chip">₹3.5 LPA – ₹8 LPA+</span>
+          <span>Best for students interested in automation, machines, and industry tech</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Best College Categories You Should Target</h2>
+        <p>Do not choose a college only by advertisement. Always compare college type, approval, placements, and affordability.</p>
+      </div>
+      <div class="college-grid">
+        <div class="college-box">
+          <h3>Top Tier Colleges</h3>
+          <ul>
+            <li>IITs, NITs, IIITs</li>
+            <li>Best for strong academics and placements</li>
+            <li>Usually require top entrance exam performance</li>
+            <li>Ideal for highly competitive students</li>
+          </ul>
+        </div>
+        <div class="college-box">
+          <h3>Good Private Universities</h3>
+          <ul>
+            <li>Placement-focused private institutions</li>
+            <li>Better flexibility in specializations</li>
+            <li>Useful for students seeking modern infrastructure</li>
+            <li>Check UGC, AICTE, NAAC, placement record carefully</li>
+          </ul>
+        </div>
+        <div class="college-box">
+          <h3>Affordable State Colleges</h3>
+          <ul>
+            <li>Budget-friendly options for many students</li>
+            <li>Good for those seeking value with low fees</li>
+            <li>Need careful evaluation of branch and placement support</li>
+            <li>Best when combined with skill-building outside college</li>
+          </ul>
+        </div>
+        <div class="college-box">
+          <h3>Skill + Placement Focused Options</h3>
+          <ul>
+            <li>Suitable for students focused on jobs and practical learning</li>
+            <li>Look for internship support and industry tie-ups</li>
+            <li>Important for AI, coding, cyber, and data-based fields</li>
+            <li>Choose only verified and trusted institutions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#eff6ff;">
+    <div class="container">
+      <div class="section-title">
+        <h2>How We Help You</h2>
+        <p>From confusion to clarity, we guide you step by step so you can choose the right branch and the right college.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Understand Your Goal</h3>
+          <p>We first understand your interest, marks, budget, and long-term career target.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Select the Right Branch</h3>
+          <p>We help you choose the branch that fits your profile and future scope.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Compare the Best Colleges</h3>
+          <p>We suggest suitable colleges based on approvals, fees, and placement potential.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Admission Support</h3>
+          <p>We assist you in the admission process so you can move forward with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lead-form">
+    <div class="container">
+      <div class="form-section">
+        <div>
+          <div class="badge" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.16);">Free Counseling Support</div>
+          <h2 style="font-size:clamp(28px,4vw,42px); line-height:1.2; margin-bottom:14px;">Get Personalized B.Tech Admission Guidance</h2>
+          <p>
+            Fill this form and share your details. You can also directly connect on WhatsApp for faster support regarding
+            branch selection, college recommendation, fees, and admission help.
+          </p>
+          <div class="mini-points">
+            <div>✔ Guidance for B.Tech admission and branch selection</div>
+            <div>✔ Support for college comparison and decision making</div>
+            <div>✔ Help with fees, eligibility, and admission process</div>
+            <div>✔ WhatsApp assistance for quick response</div>
+          </div>
+        </div>
+        <form id="admissionForm">
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter your full name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Mobile Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="Enter your mobile number" required>
+          </div>
+          <div class="field">
+            <label for="stream">12th Stream</label>
+            <select id="stream" name="stream" required>
+              <option value="">Select your stream</option>
+              <option>Science PCM</option>
+              <option>Science PCB</option>
+              <option>Commerce</option>
+              <option>Arts</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="interest">Interested Branch</label>
+            <select id="interest" name="interest" required>
+              <option value="">Select branch</option>
+              <option>Computer Science Engineering</option>
+              <option>AI & Machine Learning</option>
+              <option>Data Science & Data Analytics</option>
+              <option>Cyber Security</option>
+              <option>Robotics & Automation</option>
+              <option>Not Sure</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Your Query</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your question about B.Tech admission, branch, college, fees, or career guidance"></textarea>
+          </div>
+          <button class="btn btn-primary" style="width:100%;" type="submit">Submit & Connect on WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>B.Tech Admission Guidance 2026</strong><br>Branch Selection | Best Colleges | Career Guidance | Admission Help</p>
+    </div>
+  </footer>
+
+  <div class="floating-wa">
+    <div class="wa-popup" id="waPopup">
+      <div class="wa-header">
+        <span>WhatsApp Guidance</span>
+        <button class="wa-close" id="closePopup">×</button>
+      </div>
+      <div class="wa-body">
+        <h4>Need Help With B.Tech Admission?</h4>
+        <p>Get help with branch selection, college guidance, fees, career scope, and admission support.</p>
+        <div class="wa-quick">
+          <button data-msg="Hello, mujhe B.Tech admission ke liye guidance chahiye.">B.Tech Admission Help</button>
+          <button data-msg="Hello, mujhe best B.Tech branch choose karne me help chahiye.">Best Branch Selection</button>
+          <button data-msg="Hello, mujhe B.Tech ke best college aur fees ke baare me jankari chahiye.">Best College & Fees</button>
+        </div>
+        <button class="wa-main-btn" id="mainWaBtn">Chat on WhatsApp</button>
+      </div>
+    </div>
+    <button class="wa-fab" id="fabBtn" aria-label="Open WhatsApp popup">💬</button>
+  </div>
+
+  <script>
+    const phoneNumber = '919798686973';
+    const defaultMessage = 'Hello, mujhe B.Tech admission ke liye guidance chahiye. Mujhe branch selection, best college aur fees ke baare me jankari chahiye.';
+
+    function openWhatsApp(message = defaultMessage) {
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+
+    document.getElementById('heroWhatsappBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      openWhatsApp();
+    });
+
+    document.getElementById('mainWaBtn').addEventListener('click', function() {
+      openWhatsApp();
+    });
+
+    document.querySelectorAll('.wa-quick button').forEach(btn => {
+      btn.addEventListener('click', () => openWhatsApp(btn.dataset.msg));
+    });
+
+    const popup = document.getElementById('waPopup');
+    const fabBtn = document.getElementById('fabBtn');
+    const closePopup = document.getElementById('closePopup');
+
+    fabBtn.addEventListener('click', () => {
+      popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+    });
+
+    closePopup.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+
+    document.getElementById('admissionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const stream = document.getElementById('stream').value.trim();
+      const interest = document.getElementById('interest').value.trim();
+      const query = document.getElementById('message').value.trim();
+
+      const formMessage = `Hello, mera naam ${name} hai. Mobile Number: ${phone}. 12th Stream: ${stream}. Interested Branch: ${interest}. Query: ${query || 'Mujhe B.Tech admission guidance chahiye.'}`;
+      openWhatsApp(formMessage);
+    });
+
+    setTimeout(() => {
+      popup.style.display = 'block';
+    }, 1800);
+  </script>
+</body>
+</html>
