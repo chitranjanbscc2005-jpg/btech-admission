@@ -1,1 +1,1 @@
-# btech-admission
+btech_admission_landing_page
